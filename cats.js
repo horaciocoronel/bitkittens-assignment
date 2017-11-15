@@ -7,7 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
       url: url,
       method: 'GET',
       dataType: 'json'
-    })
+    }).done(function(data){
+      var catsList = data["cats"];
+      for (var i = 0; i < catsList.length; i++) {
+
+        console.log(catsList[i].name);
+      }
+    })// ending of Done
   })
 
 
