@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
       url: url,
       method: 'GET',
+      data: {number: 4},
       dataType: 'json'
     }).done(function(data){
       var catsList = data["cats"];
